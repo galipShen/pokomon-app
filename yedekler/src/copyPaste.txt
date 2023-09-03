@@ -1,0 +1,17 @@
+console.log("DATA:", data)
+    console.log("KEY:", key)
+
+    const pokeData = data?.getAllPokemon;   //array geldi
+    //her bi değişkene değiken veriyoruz------------pokemon
+    //arr içindeki pokemonların key özelliği  il----pokemon.key
+    // diğer listeden route.params ile 
+    //gelen key eşleşince gösteriyoruz --------------key 
+    //gösterdiğimiz data arrayı içindeki bir pokemon elemanı
+    const selectedPoke = pokeData?.find(pokemon => pokemon.key === key)
+    console.log("SELECTED POKE:", selectedPoke)
+    console.log("ABILITY:", selectedPoke?.abilities?.first?.name)
+    console.log("DESCRIPTION:", selectedPoke?.abilities?.first?.shortDesc)
+
+    const abilityName = selectedPoke?.abilities?.first?.name;
+    const abilityDesc = selectedPoke?.abilities?.first?.shortDesc;
+    console.log("-------------------------------------------------------------------------")
